@@ -6,6 +6,11 @@ error_reporting(E_ALL);
 
 try {
 
+    /**
+     * Global autoloader
+     */
+    require __DIR__ . '/../apps/common/loader.php';
+
 	/**
 	 * Include services
 	 */

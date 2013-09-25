@@ -4,8 +4,7 @@
  * Services are globally registered in this file
  */
 
-use Phalcon\Mvc\Router,
-	Phalcon\Mvc\Url,
+use	Phalcon\Mvc\Url,
 	Phalcon\DI\FactoryDefault,
 	Phalcon\Session\Adapter\Files as SessionAdapter,
     Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
@@ -26,12 +25,14 @@ $di = new FactoryDefault();
  */
 $di['router'] = function() {
 
-	$router = new Router();
+    $router = new \Phalcon\Mvc\Router\Annotations(false);
 
-	$router->setDefaultModule("structure");
-	$router->setDefaultNamespace("Unocms\Structure\Controllers");
+//	$router->setDefaultModule('base');
+	$router->setDefaultNamespace("Unocms\Base\Controllers");
 
-	return $router;
+    $router->addResource('Unocms\Base\Controllers\Admin\Index', '/admin');
+
+    return $router;
 };
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Unocms\Structure;
+namespace Unocms\Base;
 
 use Phalcon\Loader,
 	Phalcon\Mvc\View,
@@ -14,21 +14,20 @@ class Module implements ModuleDefinitionInterface
 	 */
 	public function registerAutoloaders()
 	{
+//		$loader = new Loader();
 
-		$loader = new Loader();
+//		$loader->registerNamespaces(array(
+//			'Unocms\Base\Controllers'       => __DIR__ . '/controllers/',
+//			'Unocms\Base\Models'            => __DIR__ . '/models/',
+//		));
 
-		$loader->registerNamespaces(array(
-			'Unocms\Structure\Controllers' => __DIR__ . '/controllers/',
-			'Unocms\Structure\Models' => __DIR__ . '/models/',
-		));
-
-		$loader->register();
+//		$loader->register();
 	}
 
 	/**
 	 * Registers the module-only services
 	 *
-	 * @param Phalcon\DI $di
+	 * @param \Phalcon\DI $di
 	 */
 	public function registerServices($di)
 	{

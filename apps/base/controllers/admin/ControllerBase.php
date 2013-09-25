@@ -1,6 +1,6 @@
 <?php
 
-namespace Unocms\Structure\Controllers;
+namespace Unocms\Base\Controllers\Admin;
 
 use Phalcon\Mvc\Controller;
 

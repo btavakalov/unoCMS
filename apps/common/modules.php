@@ -4,14 +4,10 @@
  * Register application modules
  */
 $application->registerModules(array(
-	'structure' => array(
-		'className' => 'Unocms\Structure\Module',
-		'path' => __DIR__ . '/../structure/Module.php'
-	),
-	'shop' => array(
-		'className' => 'Unocms\Shop\Module',
-		'path' => __DIR__ . '/../shop/Module.php'
+	'base' => array(
+		'className' => 'Unocms\Base\Module',
+		'path' => __DIR__ . '/../base/Module.php'
 	),
 ));
 
-$application->setDefaultModule("structure");
+$application->setDefaultModule('base');
